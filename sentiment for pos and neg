@@ -11,5 +11,15 @@ def ReputationSentiment(positive_text, negative_text, input_text):
 positive_text = ['good', 'negative' ,'competent', 'reliable', 'capable', 'talented', 'excellent','outstanding']
 negative_text = ['bad', 'positive' ,'incompentence', 'incompetent', 'incapacity', 'useless', 'ineffective']
 
-input_text = "Which candidate do you want to search for?"
+input_text = "Type candidate you want to search for or type quit to exit"
 ReputationSentiment(positive_text, negative_text, input_text)
+
+
+if input_text == 'quit'
+    print("Goodbye.")
+elif ReputationSentiment(positive_text, negative_text, input_text) > 0:
+    print(input_text,'shows positive reputation for 2020 election and', input_text, 'got',ReputationSentiment(positive_text, negative_text, input_text), 'positive comments')
+elif ReputationSentiment(positive_text, negative_text, input_text) < 0:
+    print(input_text,'shows negative reputation for 2020 election and', input_text, 'got',ReputationSentiment(positive_text, negative_text, input_text), 'negative comments')
+elif ReputationSentiment(positive_text, negative_text, input_text) == 0:
+    print(input_text,'shows neutral reputation for 2020 election and', input_text, 'got',ReputationSentiment(positive_text, negative_text, input_text), 'same number of both positive and negative comments')
